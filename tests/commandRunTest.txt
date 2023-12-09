@@ -1,0 +1,4 @@
+//запуск тестов на jest с использованием modules es6
+
+node --experimental-vm-modules node_modules\jest\bin\jest.js
+node --experimental-vm-modules node_modules/jest/bin/jest.js

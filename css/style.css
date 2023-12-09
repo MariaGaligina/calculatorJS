@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #c2bbbb;
+}
+
+.wrapper {
+	margin: 10vmin auto 7vmin auto;
+	width: max-content;
+}
+
+.calculator {
+	border: solid 4px #f66b21;
+	min-width: fit-content;
+	border: 1px solid #2e2c2c;
+	border-radius: 20px;
+	background: #181717;
+	color: #f1f1f1;
+	padding: 5vmin;
+	box-shadow: 1vmin 0.8vmin 0px 0px #413c3c;
+}
+
+.screen {
+	color: #f1f1f1;
+	max-width: 50vmin;
+	border: solid 2px #f66b21;
+	height: 10vmin;
+	background: #605757;
+	border-radius: 1.5vmin;
+	margin-bottom: 5vmin;
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	user-select: none;
+	overflow: hidden;
+}
+.screen p {
+	font-size: 6vmin;
+	margin: 0vmin 0.5vmin 0.5vmin 0vmin;
+}
+
+.buttons {
+	display: grid;
+	grid-template-areas: 'c del percent division' 'seven eight nine multiplication' 'four five six adding' 'one two three subtraction' 'zero zero point answer';
+	grid-gap: 1.5vmin;
+}
+.buttons div {
+	border: solid 1px #605757;
+	box-shadow: 0.4vmin 0.3vmin 0px 0px #605757;
+	width: 9vmin;
+	height: 9vmin;
+	min-width: 40px;
+	min-height: 40px;
+	background: #413c3c;
+	border-radius: 2vmin;
+	user-select: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 50ms ease-in-out;
+}
+.buttons div:hover {
+	filter: brightness(80%);
+}
+.buttons div:active {
+	box-shadow: none;
+	transform: translate(0.4vmin, 0.3vmin);
+}
+.buttons .number {
+	background: #413c3c;
+	font-size: 5vmin;
+}
+.buttons .operation {
+	background: #605757;
+	color: #f66b21;
+	font-size: 5vmin;
+	border: solid 1px #413c3c;
+	box-shadow: 0.4vmin 0.3vmin 0px 0px #413c3c;
+}
+.buttons .answer {
+	background: #f66b21;
+	font-size: 6vmin;
+	border: solid 1px #bd4e13;
+	box-shadow: 0.4vmin 0.3vmin 0px 0px #bd4e13;
+}
+.buttons .zero {
+	grid-area: zero;
+	width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

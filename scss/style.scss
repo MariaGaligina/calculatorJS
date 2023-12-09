@@ -1,0 +1,132 @@
+//@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$bg-color: #181717;
+$orange-color: #f66b21;
+$btn-color: #413c3c;
+$comand-color: #605757;
+$text-color: #f1f1f1;
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #c2bbbb;
+}
+
+.wrapper {
+	//display: flex;
+	//align-items: center;
+	//font-family: 'PT Sans', sans-serif;
+	//font-family: 'Roboto Condensed', sans-serif;
+	//font-family: 'Poppins', sans-serif;
+
+	//text-align: center;
+	margin: 10vmin auto 7vmin auto;
+	//margin-top: 10%;
+	//width: 49.5vmin;
+	width: max-content;
+}
+
+.calculator {
+	border: solid 4px #f66b21;
+	min-width: fit-content;
+
+	//display: inline-block;
+	//width: 80%;
+	//height: 500px;
+	border: 1px solid #2e2c2c;
+	border-radius: 20px;
+	background: $bg-color;
+	color: $text-color;
+	//margin: 50px auto;
+	padding: 5vmin;
+	box-shadow: 1vmin 0.8vmin 0px 0px $btn-color;
+}
+
+.screen {
+	color: $text-color;
+	border: solid 2px #f66b21;
+	height: 10vmin;
+	background: $comand-color;
+	border-radius: 1.5vmin;
+	//padding: 5vmin 0vmin 2vmin 0vmin;
+	margin-bottom: 5vmin;
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	//flex-direction: row-reverse;
+	user-select: none;
+	//font-size: 8vmin;
+	overflow: hidden;
+
+	p {
+		font-size: 6vmin;
+		margin: 0vmin 0.5vmin 0.5vmin 0vmin;
+	}
+}
+
+.buttons {
+	//border: solid 1px red;
+	display: grid;
+	grid-template-areas:
+		'c del percent division'
+		'seven eight nine multiplication'
+		'four five six adding'
+		'one two three subtraction'
+		'zero zero point answer';
+	grid-gap: 1.5vmin;
+
+	div {
+		border: solid 1px $comand-color;
+		box-shadow: 0.4vmin 0.3vmin 0px 0px $comand-color;
+		width: 9vmin;
+		height: 9vmin;
+		min-width: 40px;
+		min-height: 40px;
+		background: $btn-color;
+		border-radius: 2vmin;
+		//vertical-align: middle;
+		user-select: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		//opacity: 0.5;
+		transition: 50ms ease-in-out;
+
+		&:hover {
+			//opacity: 0.5;
+			//filter: brightness(110%) drop-shadow(4px 2px 0.08rem #575151);
+			filter: brightness(80%);
+		}
+
+		&:active {
+			box-shadow: none;
+			transform: translate(0.4vmin, 0.3vmin);
+		}
+	}
+
+	.number {
+		background: $btn-color;
+		font-size: 5vmin;
+	}
+
+	.operation {
+		background: $comand-color;
+		color: $orange-color;
+		font-size: 5vmin;
+		border: solid 1px $btn-color;
+		box-shadow: 0.4vmin 0.3vmin 0px 0px $btn-color;
+	}
+
+	.answer {
+		background: $orange-color;
+		font-size: 6vmin;
+		border: solid 1px #bd4e13;
+		box-shadow: 0.4vmin 0.3vmin 0px 0px #bd4e13;
+	}
+
+	.zero {
+		grid-area: zero;
+		width: 100%;
+	}
+}
