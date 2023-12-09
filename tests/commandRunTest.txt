@@ -2,3 +2,7 @@
 
 node --experimental-vm-modules node_modules\jest\bin\jest.js
 node --experimental-vm-modules node_modules/jest/bin/jest.js
+
+//ссылка на github-pages
+
+https://mariagaligina.github.io/calculatorJS/html/index.html
