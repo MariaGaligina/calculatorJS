@@ -1,5 +1,3 @@
-//import {clear} from './clear.js'
-
 const answer = (firstNum, secondNum, operation) => {
 	if (!((firstNum !== '') & (secondNum !== '') & (operation !== ''))) {
 		console.log('all variables are empty')
