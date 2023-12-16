@@ -44,13 +44,12 @@ describe('Click event at eventListener', () => {
 		expect(clickCallback).toHaveBeenCalled()
 	})
 
-	test('Test event listener click 2 times', () => {
+	test('Test event listener click outside', () => {
 		const clickCallback = jest.fn()
 		buttons.addEventListener('click', clickCallback)
 		//jest.simulate('click')
-		fireEvent.click(buttons)
-		fireEvent.click(buttons)
-		expect(clickCallback).toHaveBeenCalledTimes(2)
+		fireEvent.click(document.body)
+		expect(clickCallback).toHaveBeenCalledTimes(0)
 	})
 
 	//чистим моки
@@ -59,7 +58,7 @@ describe('Click event at eventListener', () => {
 	})
 })
 
-describe('Test clickCallback', () => {
+describe('Test output after clickCallbacks', () => {
 	const ev = document.createElement('div')
 	ev.innerHTML = `<span>4</span>`
 	ev.classList.add('number')

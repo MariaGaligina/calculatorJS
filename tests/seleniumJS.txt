@@ -1,0 +1,32 @@
+import {Builder, By, Key, until} from 'selenium-webdriver'
+
+describe('Selenium', () => {
+	let driver = new Builder().forBrowser('chrome').build()
+	// Открытие ссылку с проектом
+	driver.get('https://github.com/MariaGaligina/calculatorJS')
+	driver.findElement(By.linkText('Calculator')).click()
+	test('Title should be Calculator', () => {
+		expect(driver.getTitle()).toEqual('Calculator')
+	})
+	// Проверка видимости кнопок
+	const seven = driver.findElement(By.id('seven')),
+		eight = driver.findElement(By.id('eight')),
+		nine = driver.findElement(By.id('nine')),
+		adding = driver.findElement(By.id('adding')),
+		multiplication = driver.findElement(By.id('multiplication')),
+		clear = driver.findElement(By.id('clear')),
+		answer = driver.findElement(By.id('answer')),
+		output = driver.findElement(By.id('output'))
+
+	test('Buttons are displayed', () => {
+		expect(seven.isDisplayed)
+	})
+
+	test('Output should be 16', () => {
+		seven.click()
+		adding.click()
+		nine.click()
+		expect(output.getText).toEqual('16')
+	})
+	//driver.quit()
+})

@@ -1,7 +1,7 @@
 import {fillAndDisplay} from './fillNumber.js'
 
 const modifiedClickCallback = (elem, firstNumber, secondNumber, operation, screen) => {
-	if (elem.classList.contains('buttons')) return []
+	if (elem.classList.contains('buttons')) return [firstNumber, secondNumber, operation, screen]
 	else {
 		if (elem.dataset.type === 'number') {
 			const fillAndDisplayFirstNumber = fillAndDisplay(firstNumber, elem, screen)

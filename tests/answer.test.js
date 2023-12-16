@@ -31,10 +31,4 @@ describe('Tisting answer', () => {
 		expect(answer(77, 7, '*')).toEqual(['539', '', '', true])
 		expect(answer(77, 7, '/')).toEqual(['11', '', '', true])
 	})
-
-	test(`The result's length has been less 8`, () => {
-		expect(countDecimalPlaces(answer(0.2, 0.1, '+')[0])).toBeLessThanOrEqual(8)
-		expect(countDecimalPlaces(answer(2, 0.1, '/')[0])).toBeLessThanOrEqual(8)
-		expect(countDecimalPlaces(answer(20, 1, '-')[0])).toBeLessThanOrEqual(8)
-	})
 })

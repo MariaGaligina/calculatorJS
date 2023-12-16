@@ -1,6 +1,7 @@
 const percent = (firstNumber, secondNumber, output) => {
+	console.log('first', firstNumber)
 	if (!(firstNumber || secondNumber)) {
-		output = '0'
+		output = 'NaN'
 		return [firstNumber, secondNumber, output]
 	}
 	if (secondNumber === '') {
